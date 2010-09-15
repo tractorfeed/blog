@@ -1,2 +1,5 @@
 sinatra
+sqlite3-ruby
 sequel
+RedCloth
+builder
