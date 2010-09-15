@@ -1,0 +1,143 @@
+* { margin: 0; padding: 0; font-size: 1em; list-style-position: inside; }
+
+#content {
+  width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  float: left;
+  width: 800px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  font-size: 22pt;
+}
+
+header h2 {
+  font-size: 12pt;
+}
+
+#main {
+  float: left;
+  width: 530px;
+}
+
+article {
+  margin-bottom: 40px;
+}
+
+article h1 {
+  font-size: 16pt;
+  margin-bottom: 0;
+}
+
+article section {
+  margin-top: 20px;
+}
+
+article h2 {
+  font-size: 14pt;
+  margin: 30px 0 15px;
+}
+
+article h3, article h4, article h5, article h6 {
+  font-size: 12pt;
+  margin: 30px 0 15px;
+}
+
+article time {
+  font-size: 10pt;
+}
+
+article p, article pre, article ul, article blockquote {
+  margin-bottom: 15px;
+}
+
+article ul, article pre, article blockquote {
+  margin-left: 30px
+}
+
+aside {
+  float: right;
+  width: 250px;
+}
+
+aside section {
+  margin: 20px 0;
+}
+
+aside section h1 {
+  margin-bottom: 10px;
+}
+
+aside ul {
+  margin-left: 10px;
+}
+
+aside .widget {
+  margin: 20px 0;
+}
+
+img {
+  border: 0;
+}
+
+label {
+  font-size: 10pt;
+}
+
+input, textarea {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}
+
+input {
+  padding: 3px 1px 3px 3px;
+}
+
+textarea, button {
+  padding: 3px;
+}
+
+button {
+  -webkit-appearance: push-button;
+}
+
+#main input, #main textarea {
+  width: 530px;
+}
+
+#main .admin h1 {
+  font-size: 14pt;
+  margin-bottom: 15px;
+}
+
+#main .admin h2 {
+  margin-top: 20px;
+}
+
+#post p {
+  margin: 0 0 15px 0;
+}
+
+#message {
+  margin: 20px 0;
+}
+
+a.edit {
+  margin-left: 10px;
+  font-size: 10pt;
+}
+
+footer {
+  float: left;
+  width: 800px;
+  padding: 20px 0;
+  text-align: center;
+}

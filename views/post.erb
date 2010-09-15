@@ -1,0 +1,21 @@
+<section class="admin">
+    <h1>Post</h1>
+    <form id="post" method="post" action="/post">
+        <input type="hidden" name="id" value="<%= @post.id %>" />
+        <div>
+            <input type="text" name="title" value="<%= @post.title %>" placeholder="Title"/>
+        </div>
+        <div>
+            <textarea name="text" rows="20" cols="40" placeholder="Write here..."><%= @post.text %></textarea>
+        </div>
+        <p>Use <a href="http://redcloth.org/hobix.com/textile/">textile</a> to text formatting.</p>
+        <button type="submit" name="action" value="preview">Preview</button>
+        <button type="submit" name="action" value="save">Save</button>
+    </form>
+    <% if @post.id %>
+        <form id="delete" method="post" action="/post/<%= @post.id %>">
+            <input type="hidden" name="_method" value="delete" />
+            <button type="submit">Delete</button>
+        </form>
+    <% end %>
+</section>

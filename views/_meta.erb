@@ -1,0 +1,29 @@
+<% if logged? %>
+    <section class="admin">
+        <nav>
+            <h1>Admin</h1>
+            <ul>
+                <li><a href="/post/new">New post</a></li>
+                <li><a href="/widget/new">New widget</a></li>
+                <li><a href="/settings">Blog settings</a></li>
+            </ul>
+        </nav>
+    </section>
+<% end %>
+<section id="search">
+    <form action="/search" method="get" accept-charset="utf-8">
+        <input type="search" name="q" placeholder="Search" value="<%= params[:q] %>" />
+    </form>
+</section>
+<section id="widgets">
+    <% @widgets.each do |widget| %>
+        <% if not widget.admin or (logged? and widget.admin) %>
+            <div class="widget">
+                <h1><%= widget.title %><%= edit_link 'widget', widget.id %></h1>
+                <div class="content">
+                    <%= widget.content %>
+                </div>
+            </div>
+        <% end %>
+    <% end %>
+</section>

@@ -1,0 +1,20 @@
+<% @posts.each do |post| %>
+    <article>
+            <h1>
+                <a href="/<%= post.link %>"><%= post.title %></a>
+                <%= edit_link 'post', post.id %>
+            </h1>
+            <time datetime="<%= post.date.iso8601 %>"><%= date post.date %></time>
+            <section class="text">
+                <%= textile post.text %>
+            </section>
+            <% if @footer and not @footer.empty? %>
+                <section class="footer"><%= @footer %></section>
+            <% end %>
+    </article>
+<% end %>
+<% if @next_page %>
+    <section id="paging">
+        <a href="/page/<%= @next_page %>">Next page →</a>
+    </section>
+<% end %>

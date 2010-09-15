@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title><%= $settings.name %> &#8212; <%= @title || $settings.title %></title>
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+        <meta name="Description" content="<%= $settings.title %>">
+        <meta name="generator" content="Wind [<%= wind_link %>]" />
+        <link rel="alternate" type="application/rss+xml" title="<%= $settings.name %> RSS Feed" href="<%= feed_url %>" />
+        <link rel="index" title="<%= $settings.name %>" href="/" />
+        <link rel="stylesheet" href="<%= style %>" type="text/css" media="screen" />
+    </head>
+    <body>
+        <div id="content">
+            <header>
+                <h1><a href="/"><%= $settings.name %></a></h1>
+                <h2><%= $settings.title %></h2>
+            </header>
+            <% if @message %>
+                <section id="message"><%= @message %></section>
+            <% end %>
+            <section id="main">
+                <%= yield %>
+            </section>
+            <aside>
+                <%= partial :meta %>
+            </aside>
+            <footer>
+                &copy;<%= today.year %> <%= $settings.name %>
+                &#8212; Powered by <a href="<%= wind_link %>">Wind</a>
+                &#8212;
+                <% if logged? %>
+                    <a href="/logout">Logout</a>
+                <% else %>
+                    <a href="/login">Login</a>
+                <% end %>
+            </footer>
+        </div>
+        <% unless logged? %>
+            <div id="tracker">
+                <%= $settings.tracker %>
+            </div>
+        <% end %>
+
+		<script type="text/javascript" src="/jquery-1.4.2.min.js"> </script> 
+		<script type="text/javascript" src="/application.js"> </script> 
+    </body>
+</html>
